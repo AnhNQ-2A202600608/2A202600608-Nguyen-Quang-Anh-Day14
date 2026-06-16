@@ -1,10 +1,5 @@
 import json
 import os
-import sys
-import io
-
-# Configure UTF-8 encoding for standard output on Windows
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 def validate_lab():
     print("🔍 Đang kiểm tra định dạng bài nộp...")
