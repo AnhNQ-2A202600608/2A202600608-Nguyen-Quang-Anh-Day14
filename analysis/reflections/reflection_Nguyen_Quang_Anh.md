@@ -63,7 +63,7 @@ Trong quá trình phát triển, chúng tôi đã đưa ra các quyết định 
 ## 5. Bài học rút ra từ việc so sánh V1 và V2
 
 Qua việc chạy thử nghiệm và đối sánh hiệu năng:
-- **Retrieval Quality trực tiếp quyết định Answer Quality**: V1 chỉ lấy `top_k = 1` nên điểm trung bình chỉ đạt 2.86/5.0 vì thiếu thông tin ở các câu hỏi phức tạp (và đạt 3.71/5.0 khi chạy API thật). Khi nâng cấp V2 lấy `top_k = 3` và tối ưu hóa từ khóa, điểm số vọt lên 5.00/5.00 trên cả real API và chế độ fallback. Điều này chứng minh "Rác đầu vào thì rác đầu ra" (Garbage In, Garbage Out) trong RAG.
+- **Retrieval Quality trực tiếp quyết định Answer Quality**: V1 chỉ lấy `top_k = 1` nên điểm trung bình chỉ đạt 2.86/5.0 vì thiếu thông tin ở các câu hỏi phức tạp (và đạt 3.67/5.0 khi chạy API thật). Khi nâng cấp V2 lấy `top_k = 3` và tối ưu hóa từ khóa, điểm số vọt lên 5.00/5.00 trên cả real API và chế độ fallback. Điều này chứng minh "Rác đầu vào thì rác đầu ra" (Garbage In, Garbage Out) trong RAG.
 - **Mô phỏng lỗi truy xuất trong V1**: Agent_V1_Base sử dụng keyword retrieval đơn giản với deterministic hash-based noise để mô phỏng lỗi truy xuất, đồng thời vẫn đảm bảo kết quả benchmark có thể lặp lại được.
 - **An toàn hệ thống đòi hỏi thiết kế chủ động**: V1 hoàn toàn bị lừa bởi Prompt Injection và bịa đặt thông tin khi gặp câu hỏi ngoài lề. Việc tối ưu hóa hệ thống ở V2 bằng cách cài đặt System Prompt nghiêm ngặt cùng các bộ lọc an toàn đã giúp cải thiện độ tin cậy vượt bậc của sản phẩm.
 

@@ -1,0 +1,38 @@
+{
+  "Agent_V1_Base": {
+    "avg_score": 3.672727272727273,
+    "hit_rate": 0.509090909090909,
+    "mrr": 0.509090909090909,
+    "avg_latency_ms": 2472.9073309090218,
+    "total_cost_usd": 0.016493099999999997
+  },
+  "Agent_V2_Optimized": {
+    "avg_score": 5.0,
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "avg_latency_ms": 61.458436363913776,
+    "total_cost_usd": 0.015255000000000006
+  },
+  "delta": {
+    "avg_score": 1.3272727272727272,
+    "hit_rate": 0.49090909090909096,
+    "mrr": 0.49090909090909096
+  },
+  "release_gate": {
+    "approved": true,
+    "reason": "Release approved: V2 Score (5.00) >= 4.0, V2 Hit Rate (100.0%) >= 80%, Delta Score (+1.33) >= 0, OOT Refusal Rate (100.0%) >= 80%, Adv Pass Rate (100.0%) >= 80%."
+  },
+  "metadata": {
+    "version": "Agent_V2_Optimized",
+    "total": 55,
+    "timestamp": "2026-06-16 17:12:25"
+  },
+  "metrics": {
+    "avg_score": 5.0,
+    "hit_rate": 1.0,
+    "agreement_rate": 1.0,
+    "mrr": 1.0,
+    "cohens_kappa": 1.0,
+    "position_bias_rate": 0.2
+  }
+}
